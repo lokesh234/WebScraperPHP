@@ -1,7 +1,9 @@
 <?php
+// Creating the HTML Searcher class
   class HTML_Searcher {
     private $html;
 
+    //Functions for constructing HTML, finding tags 
     function __construct($html) {
       $this->html = $html;
     }
@@ -16,7 +18,8 @@
       //so that HTML remains unedited at end of function
       $htmlCopy = (string) $this->html;
 
-
+    
+    
     while(strpos($htmlCopy, $endTag) !== false) {
         $startPos = strpos($htmlCopy, $frontTag);
         $endPos = strpos($htmlCopy, $endTag) + 4;

@@ -3,6 +3,7 @@
   class Scraper {
     private $url;
 
+    //Functions for constructing, getting, and setting up a URL
     function __construct($url) {
       $this->url = $url;
     }
@@ -13,6 +14,10 @@
     function setURL($url) {
       $this->url = $url;
     }
+
+    //Main Scraping Function 
+    //@ No Parameteres 
+    //Function tries and catches for most errors related to the scrape
 
     function scrape() {
       try {
